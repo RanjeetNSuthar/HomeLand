@@ -1,0 +1,24 @@
+As a disciplined student, I have always believed that whenever you take a task, complete it, do full justice with it. May it be academics, sports, projects or extracurricular activities I have given my best.
+
+I have done several part-time jobs in the different sections of my college like the account section, lab in-charge, etc. Other than I have also volunteered for management work in some events.
+
+Once I start work, I don’t get distracted until I complete it. And I believe this is very essential and positive characteristics of anyone’s personality trait. If I am hired, if I get the opportunity I will use my full strength and knowledge to complete all my tasks and add value to the company. I would also like to learn and seek assistance from the professionals I would be working under.
+
+I am having a semester break till 10th July so till that time i will be completely available and invest my whole time here, but i can assure you that even after the end of Vacation i will give enough time to the assigned tasks and will complete them before the deadline.
+
+
+
+
+I/O
+ 
+if __name__ == '__main__':
+    T = int(input())
+    for t in range(T):
+        A = list(map(int,input().strip().split()))
+        print(A)
+
+3
+10
+640 435 647 352 8 90 960 329 859
+
+transition from existing fosil fuel to Electricity would be a game changer for India
