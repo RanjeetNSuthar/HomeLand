@@ -1,30 +1,40 @@
-/**
-* Template Name: EstateAgency - v2.2.1
-* Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-(function($) {
+(function ($) {
   "use strict";
 
+  var s = $("#nav_bottom");
+  $(window).scroll(function () {
+    var windowpos = $(window).scrollTop();
+    if (windowpos >= 300) {
+      document.getElementById("logo2").style.display = "flex";
+      document.getElementById("right_nav_cont").style.display = "flex";
+      s.addClass("nav_bottom_scrolled");
+      s.removeClass("nav_bottom")
+    } else {
+      document.getElementById("logo2").style.display = "none";
+      document.getElementById("right_nav_cont").style.display = "none";
+      s.addClass("nav_bottom")
+      s.removeClass("nav_bottom_scrolled");
+    }
+  });
+
   // Preloader
-  $(window).on('load', function() {
+  $(window).on('load', function () {
     if ($('#preloader').length) {
-      $('#preloader').delay(100).fadeOut('slow', function() {
+      $('#preloader').delay(100).fadeOut('slow', function () {
         $(this).remove();
       });
     }
   });
 
   // Back to top button
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(this).scrollTop() > 100) {
       $('.back-to-top').fadeIn('slow');
     } else {
       $('.back-to-top').fadeOut('slow');
     }
   });
-  $('.back-to-top').click(function() {
+  $('.back-to-top').click(function () {
     $('html, body').animate({
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
@@ -54,30 +64,30 @@
   });
 
   /*--/ Animate Carousel /--*/
-  $('.intro-carousel').on('translate.owl.carousel', function() {
+  $('.intro-carousel').on('translate.owl.carousel', function () {
     $('.intro-content .intro-title').removeClass('animate__zoomIn animate__animated').hide();
     $('.intro-content .intro-price').removeClass('animate__fadeInUp animate__animated').hide();
     $('.intro-content .intro-title-top, .intro-content .spacial').removeClass('animate__fadeIn animate__animated').hide();
   });
 
-  $('.intro-carousel').on('translated.owl.carousel', function() {
+  $('.intro-carousel').on('translated.owl.carousel', function () {
     $('.intro-content .intro-title').addClass('animate__zoomIn animate__animated').show();
     $('.intro-content .intro-price').addClass('animate__fadeInUp animate__animated').show();
     $('.intro-content .intro-title-top, .intro-content .spacial').addClass('animate__fadeIn animate__animated').show();
   });
 
   /*--/ Navbar Collapse /--*/
-  $('.navbar-toggle-box-collapse').on('click', function() {
+  $('.navbar-toggle-box-collapse').on('click', function () {
     $('body').removeClass('box-collapse-closed').addClass('box-collapse-open');
   });
-  $('.close-box-collapse, .click-closed').on('click', function() {
+  $('.close-box-collapse, .click-closed').on('click', function () {
     $('body').removeClass('box-collapse-open').addClass('box-collapse-closed');
     $('.menu-list ul').slideUp(700);
   });
 
   /*--/ Navbar Menu Reduce /--*/
   $(window).trigger('scroll');
-  $(window).bind('scroll', function() {
+  $(window).bind('scroll', function () {
     var pixels = 50;
     var top = 1200;
     if ($(window).scrollTop() > pixels) {
@@ -159,3 +169,4 @@
   });
 
 })(jQuery);
+

@@ -1,0 +1,86 @@
+.section {
+    border:2px solid black;
+    margin: 10px;
+    height : auto;
+    width: auto;
+    display:flex;
+    box-sizing: border-box;
+    padding:18px;
+    box-shadow: 4px 4px gray;
+    font-size: larger;
+}
+
+.section > img{
+    height:250px;
+    width:250px;
+}
+
+.amount{
+    color:orange;
+    margin-top: 0px;
+}
+.property_card{
+    /* border:2px solid red; */
+    margin:100px;
+    height: 3000px;
+    width: 633px;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+
+
+.description > img
+{
+    padding-left: 9px;
+ height: 33px;
+ width:29px
+}
+
+.description{
+    display:flex
+}
+
+
+p.district{
+    margin-top: 0px;
+}
+
+.bedroom > img{
+    
+    height: 36px;
+    width: 38px;
+    margin-left:15px;
+}
+
+.bathroom > img{
+    
+    height: 36px;
+    width: 38px;
+    margin-left:39px;
+}
+
+.garage> img{
+    
+    height: 36px;
+    width: 38px;
+    margin-left:40px;
+}
+
+
+.count{
+    margin-top: -3px;
+    margin-left:28px
+}
+.icons{
+    display: flex;
+}
+
+.bathroom-count{
+    margin-top: -2px;
+    padding-left:53px;
+}
+
+.garage-count{
+    margin-top:0px ;
+    padding-left:57px
+}
