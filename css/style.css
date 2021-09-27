@@ -4,6 +4,7 @@
 body {
   font-family: 'Poppins', sans-serif;
   color: #555555;
+  background-color: #f5f3f4;
 }
 
 h1,
@@ -147,7 +148,7 @@ a:hover {
   width: 100%;
   height: 2px;
   background-color: #ffb900;
-  z-index: 2;
+  z-index: 3;
 }
 
 /*------/ Bg Image /------*/
@@ -608,7 +609,7 @@ a:hover {
   flex-wrap: wrap;
   position: sticky;
   top: -15.4rem;
-  z-index: 1; /*to position it top of other content */
+  z-index: 1000; /*to position it top of other content */
 }
 
 #logo{
@@ -2362,6 +2363,6 @@ footer .copyright-footer {
   padding-top: 20px;
 }
 
-footer a,p{
+footer a,footer p,footer i{
   color: #f3f3f3;
 }

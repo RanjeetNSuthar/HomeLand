@@ -1,4 +1,133 @@
-h1{
-    font-size: 3rem;
+section{
+    margin-top: 3rem;
+    justify-content: center;
     text-align: center;
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+    font-family: 'Nunito Sans', sans-serif;
 }
+
+section h1{
+    margin-bottom: 3rem;
+}
+
+.card{
+    display: flex;
+    text-align: left;
+    padding: 1.25rem;
+    background-color: #ffffff;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #70798c, -0.1rem -0.1rem 0.5rem 0.1rem #70798c;
+}
+
+.card:hover{
+    box-shadow: 0rem 0.2rem 0.5rem 0rem #ffb900;
+    transform: scale(1.002);
+}
+
+.card-header{
+    padding: 0%;
+    border-bottom: none;
+    background-color: #ffffff;
+}
+
+.title-image{
+    height: 15rem;
+    width: 100%;
+}
+
+.card-title{
+    margin-top: 1.25rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.3rem;
+}
+
+.card-body{
+    border: none;
+    padding: 0%;
+}
+
+.property-location{
+    font-size: 0.9rem;
+}
+
+.property-price{
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 0.8rem 0;
+    color: #ffb900;
+}
+
+.property-info{
+    font-size: 1rem;
+    border: 1px solid #efefef;
+    padding: 0.5rem 0rem;
+}
+
+.property-info p{
+    width: 100%;
+    display: block;
+    font-size: 0.8rem;
+    color: black;
+    margin-top: 0.4rem;
+    margin-bottom: 0rem;
+}
+
+.property-info .col-4{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+    border-right: 1px solid #efefef;
+}
+
+.property-info ul{
+    padding: 0%;
+    margin: 0%;
+}
+
+.card-footer{
+    border: none;
+    display: flex;
+    margin-top: 1rem;
+    padding: 0%;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.type1{
+    height: 100%;
+    width: 55%;
+    background-color: #ffb900;
+    color: black;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 999;
+}
+
+.type1::after{
+    content: "";
+    background: #ffb900;
+    z-index: 1;
+    width: 3rem;
+    height: 100%;
+    transform: skew(-30deg);
+    position: absolute;
+    top: 0rem;
+    right: 8rem; 
+}
+
+.type2{
+    width: 45%;
+    background-color: black;
+    color: #ffffff;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: none;
+}
+
+
+
