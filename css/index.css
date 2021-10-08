@@ -17,11 +17,17 @@ section h1{
     padding: 1.25rem;
     background-color: #ffffff;
     box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #70798c, -0.1rem -0.1rem 0.5rem 0.1rem #70798c;
+    pointer-events: none;
 }
 
 .card:hover{
     box-shadow: 0rem 0.2rem 0.5rem 0rem #ffb900;
     transform: scale(1.002);
+
+}
+
+.card .type2{
+    pointer-events: auto;
 }
 
 .card-header{
@@ -127,6 +133,10 @@ section h1{
     justify-content: center;
     align-items: baseline;
     border: none;
+}
+
+section > .row{
+    margin-bottom: 3rem;
 }
 
 

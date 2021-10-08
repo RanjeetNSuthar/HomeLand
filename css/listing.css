@@ -1,0 +1,235 @@
+/* Navbar */
+
+.navbar-default{
+    background: none;
+    height: auto;
+}
+
+
+#logo2{
+    display: flex;
+}
+
+#right_nav_cont{
+    display: flex;
+}
+
+body{
+    background-color: white;
+}
+
+section{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    margin-bottom: 0%;
+}
+
+.form-container{
+    margin: 3rem 2rem 2rem 2rem;
+    width: 40%;
+    height: 34rem;
+    color: black;
+    background-color: #edf2f4;
+    font-family: 'Nunito Sans', sans-serif;
+    position: absolute;
+    right: 2rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 0.5rem;
+}
+
+
+.tab-head{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 0.8rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    padding: 0%;
+    text-align: center;
+    border-bottom: 0.03rem solid #909590; 
+}
+
+.tab-head > li{
+    cursor: pointer;
+    padding-bottom: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tab-head > li.active-tab{
+    border-bottom: 0.18rem solid #34a0a4;
+    color: #34a0a4;
+}
+
+.mandatory-mark{
+    position: absolute;
+    color: red;
+    font-size: 0.5rem;
+}
+
+.form-content{
+    margin: 0rem 1rem ;
+    width: 90%;
+    font-size: 0.8rem;
+}
+
+
+.form-content > div > p{
+    font-size: 0.8rem;
+    position: relative;
+    margin-left: 0.7rem;
+    font-weight: 500;
+}
+
+#basic_tab{
+    position: absolute;
+}
+
+#address_tab{
+    position: absolute;
+    right: -50rem;
+}
+
+#photo_tab{
+    position: absolute;
+    right: -200rem;
+}
+
+.field{
+    margin-bottom: 1.7rem;
+}
+
+.title{
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-right: 0.3rem;
+}
+
+input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+}
+
+input[type="radio"] + label{
+    padding: 1%;
+    padding-inline: 2%;
+    border: 0.03rem solid #909590;
+    border-radius: 2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label{
+    background-color: #34a0a4;
+}
+
+.input-field{
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 0.03rem solid #909590;
+    background-color: #edf2f4;
+    font-size: 1rem;
+}
+
+
+.text-field:focus-within{
+    color: #34a0a4;
+}
+
+.text-field input:focus{
+    border-bottom: 0.1rem solid #34a0a4;
+}
+
+.photo-container{
+    width: 90%;
+    height: 24rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+.add-photo-input-container{
+    position: relative;
+    width: 10rem;
+    height: 8rem;
+    border: 0.05rem dashed #34a0a4;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#add_photo_input{
+    line-height: 100%;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#image_icon{
+    position: absolute;
+    top: 30%;
+    left: 33%;
+    font-size: 3rem;
+    color: #34a0a4;
+}
+
+#image_add{
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    color: #34a0a4;
+}
+
+.photo-preview{
+    width: 10rem;
+    height: 8rem;
+    border: 0.05rem dashed #34a0a4;
+    border-radius: 0.3rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    padding: 0%;
+    position: relative;
+}
+
+
+.photo{
+    width: 100%;
+    height: 100%;
+}
+
+.delete{
+    position: absolute;
+    top: -5%;
+    right: -5%;
+    cursor: pointer;
+}
+
+#post_btn{
+    width: 95%;
+    height: 2.5rem;
+    position: absolute;
+    bottom: 1rem;
+    display: none;
+}
+
+
+#side_container{
+    width: 53%;
+    height: 40rem;
+    background: url("../img/temp.png") no-repeat;
+    background-size: contain;
+    position: fixed;
+}
+
+footer{
+    margin-top: 0%;
+}
