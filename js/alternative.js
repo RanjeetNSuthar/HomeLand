@@ -12,23 +12,52 @@ function BasicTab() {
     basic.style.left = "1rem";
     document.getElementById("post_btn").style.display = "none";
 }
+
 function AddressTab() {
-    var active_tab = document.getElementsByClassName("active-tab")[0];
-    active_tab.classList.remove("active-tab");
-    document.getElementById("address").classList.add("active-tab");
-    basic.style.left = "-50rem";
-    pht.style.left = "-100rem";
-    add.style.left = "1rem";
-    document.getElementById("post_btn").style.display = "none";
+    let valid = true;
+    let required_fields = document.querySelectorAll("#basic_tab input[required]");
+    for (let i = 0; i < required_fields.length; i++) {
+        if (!(required_fields[i].checkValidity())) {
+            valid = false;
+            break;
+        }
+    }
+    if (!valid) {
+        document.getElementById('valid_basic').style.display = 'block';
+    }
+    else {
+        document.getElementById('valid_basic').style.display = 'none';
+        var active_tab = document.getElementsByClassName("active-tab")[0];
+        active_tab.classList.remove("active-tab");
+        document.getElementById("address").classList.add("active-tab");
+        basic.style.left = "-50rem";
+        pht.style.left = "-100rem";
+        add.style.left = "1rem";
+        document.getElementById("post_btn").style.display = "none";
+    }
 }
+
 function PhotoTab() {
-    var active_tab = document.getElementsByClassName("active-tab")[0];
-    active_tab.classList.remove("active-tab");
-    document.getElementById("photos").classList.add("active-tab");
-    basic.style.left = "-50rem";
-    add.style.left = "-100rem";
-    pht.style.left = "1rem";
-    document.getElementById("post_btn").style.display = "block";
+    let valid = true;
+    let required_fields = document.querySelectorAll("#address_tab input[required]");
+    for (let i = 0; i < required_fields.length; i++) {
+        if (!(required_fields[i].checkValidity())) {
+            valid = false;
+            break;
+        }
+    }
+    if (!valid) {
+        document.getElementById('valid_address').style.display = 'block';
+    }
+    else {
+        var active_tab = document.getElementsByClassName("active-tab")[0];
+        active_tab.classList.remove("active-tab");
+        document.getElementById("photos").classList.add("active-tab");
+        basic.style.left = "-50rem";
+        add.style.left = "-100rem";
+        pht.style.left = "1rem";
+        document.getElementById("post_btn").style.display = "block";
+    }
 }
 
 // Eliminating Several Elements depending on the Radio Buttons selected in Basic Tab
@@ -39,13 +68,20 @@ document.getElementById("sale").addEventListener('click', function (event) {
     rent_only[0].style.display = "none";
     rent_only[1].style.display = "none";
     sale_only[0].style.display = "block";
-
+    if (!(document.querySelector(".sale-only #cost").hasAttribute('required'))) {
+        document.querySelector(".sale-only #cost").setAttribute('required', 'true');
+    }
+    document.querySelector(".rent-only #m_rent").removeAttribute('required');
 });
 
 document.getElementById("rent").addEventListener('click', function (event) {
     sale_only[0].style.display = "none";
     rent_only[0].style.display = "block";
     rent_only[1].style.display = "block";
+    if (!(document.querySelector(".rent-only #m_rent").hasAttribute('required'))) {
+        document.querySelector(".rent-only #m_rent").setAttribute('required', 'true');
+    }
+    document.querySelector(".sale-only #cost").removeAttribute('required');
 });
 
 // Eliminating Several Elements depending on the Radio Buttons selected in Address Tab
@@ -56,19 +92,34 @@ document.getElementById("appartment").addEventListener('click', function (event)
     appartment_only[0].style.display = "block";
     appartment_only[1].style.display = "flex";
     villa_indp_only[0].style.display = "none";
-
+    if (!(document.querySelector(".appartment-only input").hasAttribute('required'))) {
+        document.querySelector(".appartment-only input").setAttribute('required', 'true');
+    }
+    document.querySelector(".villa-indp-only input").removeAttribute('required');
 });
 
 document.getElementById("ind_house").addEventListener('click', function (event) {
     appartment_only[0].style.display = "none";
     appartment_only[1].style.display = "none";
     villa_indp_only[0].style.display = "block";
+    if (!(document.querySelector(".villa-indp-only input").hasAttribute('required'))) {
+        document.querySelector(".villa-indp-only input").setAttribute('required', 'true');
+    }
+    document.querySelector(".appartment-only #flat_n").removeAttribute('required');
+    document.querySelector(".appartment-only #floor_n").removeAttribute('required');
+    document.querySelector(".appartment-only #bsp").removeAttribute('required');
 });
 
 document.getElementById("villa").addEventListener('click', function (event) {
     appartment_only[0].style.display = "none";
     appartment_only[1].style.display = "none";
     villa_indp_only[0].style.display = "block";
+    if (!(document.querySelector(".villa-indp-only input").hasAttribute('required'))) {
+        document.querySelector(".villa-indp-only input").setAttribute('required', 'true');
+    }
+    document.querySelector(".appartment-only #flat_n").removeAttribute('required');
+    document.querySelector(".appartment-only #floor_n").removeAttribute('required');
+    document.querySelector(".appartment-only #bsp").removeAttribute('required');
 });
 
 // currency format
@@ -152,37 +203,6 @@ function DeletePhoto(sp) {
     var nav = $('nav');
     var navHeight = nav.outerHeight();
 
-    /*--/ ScrollReveal /Easy scroll animations for web and mobile browsers /--*/
-    window.sr = ScrollReveal();
-    sr.reveal('.foo', {
-        duration: 1000,
-        delay: 15
-    });
-
-    /*--/ Carousel owl /--*/
-    $('#carousel').owlCarousel({
-        loop: true,
-        margin: -1,
-        items: 1,
-        nav: true,
-        navText: ['<i class="ion-ios-arrow-back" aria-hidden="true"></i>', '<i class="ion-ios-arrow-forward" aria-hidden="true"></i>'],
-        autoplay: true,
-        autoplayTimeout: 3000,
-        autoplayHoverPause: true
-    });
-
-    /*--/ Animate Carousel /--*/
-    $('.intro-carousel').on('translate.owl.carousel', function () {
-        $('.intro-content .intro-title').removeClass('animate__zoomIn animate__animated').hide();
-        $('.intro-content .intro-price').removeClass('animate__fadeInUp animate__animated').hide();
-        $('.intro-content .intro-title-top, .intro-content .spacial').removeClass('animate__fadeIn animate__animated').hide();
-    });
-
-    $('.intro-carousel').on('translated.owl.carousel', function () {
-        $('.intro-content .intro-title').addClass('animate__zoomIn animate__animated').show();
-        $('.intro-content .intro-price').addClass('animate__fadeInUp animate__animated').show();
-        $('.intro-content .intro-title-top, .intro-content .spacial').addClass('animate__fadeIn animate__animated').show();
-    });
 
     /*--/ Navbar Collapse /--*/
     $('.navbar-toggle-box-collapse').on('click', function () {
