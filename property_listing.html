@@ -24,7 +24,6 @@
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="vendor/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
-    <link href="vendor/owl.carousel/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="css/style.css" rel="stylesheet">
@@ -98,12 +97,16 @@
                         <i class="fas fa-asterisk mandatory-mark"></i>
                         <p>inidcates a mandatorty field</p>
                     </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="valid_basic"
+                        style="display: none;">
+                        You missed some of the mandatorty fields.
+                    </div>
                     <div class="field">
                         <div class="group">
                             <label class="title" for="want_to">I want to</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="want_to">
-                                <input type="radio" id="sale" name="want_to" value="sale">
+                                <input type="radio" id="sale" name="want_to" value="sale" required>
                                 <label for="sale">Sale</label>
                                 <input type="radio" id="rent" name="want_to" value="rent">
                                 <label for="rent">Rent</label>
@@ -115,7 +118,7 @@
                             <label class="title" for="property_type">Property Type</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="property_type">
-                                <input type="radio" id="appartment" name="property_type" value="appartment">
+                                <input type="radio" id="appartment" name="property_type" value="appartment" required>
                                 <label for="appartment">Appartment</label>
                                 <input type="radio" id="ind_house" name="property_type" value="int_house">
                                 <label for="ind_house">Independent House</label>
@@ -129,7 +132,7 @@
                             <label class="title" for="bhk">BHK</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="bhk">
-                                <input type="radio" id="0" name="bhk" value="0">
+                                <input type="radio" id="0" name="bhk" value="0" required>
                                 <label for="0">1 RK</label>
                                 <input type="radio" id="1" name="bhk" value="1">
                                 <label for="1">1 BHK</label>
@@ -159,7 +162,7 @@
                             <label class="title" for="bathroom">Bathroom</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="bathroom">
-                                <input type="radio" id="b0" name="bathroom" value="0">
+                                <input type="radio" id="b0" name="bathroom" value="0" required>
                                 <label for="b0">0</label>
                                 <input type="radio" id="b1" name="bathroom" value="1">
                                 <label for="b1">1 </label>
@@ -189,7 +192,7 @@
                             <label class="title" for="balcony">Balcony</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="balcony">
-                                <input type="radio" id="by0" name="balcony" value="0">
+                                <input type="radio" id="by0" name="balcony" value="0" required>
                                 <label for="by0">0</label>
                                 <input type="radio" id="by1" name="balcony" value="1">
                                 <label for="by1">1</label>
@@ -219,7 +222,7 @@
                             <label class="title" for="furnish_type">Furnish Type</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="furnish_type">
-                                <input type="radio" id="fully" name="furnish_type" value="fully">
+                                <input type="radio" id="fully" name="furnish_type" value="fully" required>
                                 <label for="fully">Fully Furnished</label>
                                 <input type="radio" id="semi" name="furnish_type" value="semi">
                                 <label for="semi">Semi Furnished</label>
@@ -233,7 +236,7 @@
                             <label class="title" for="parking">Parking Slots</label>
                             <i class="fas fa-asterisk mandatory-mark"></i>
                             <div id="parking">
-                                <input type="radio" id="py0" name="parking" value="0">
+                                <input type="radio" id="py0" name="parking" value="0" required>
                                 <label for="py0">0</label>
                                 <input type="radio" id="py1" name="parking" value="1">
                                 <label for="py1">1</label>
@@ -308,6 +311,10 @@
                         <i class="fas fa-asterisk mandatory-mark"></i>
                         <p>inidcates a mandatorty field</p>
                     </div>
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert" id="valid_address"
+                        style="display: none;">
+                        You missed some of the mandatorty fields.
+                    </div>
                     <div class="field">
                         <div class="group text-field">
                             <label class="title" for="state">State</label>
@@ -353,13 +360,14 @@
                         <div class="field col-4">
                             <div class="group text-field">
                                 <label class="title" for="t_floors">Total Floors</label>
-                                <input type="number" class="input-field" id="t_floors" required>
+                                <input type="number" class="input-field" id="t_floors">
                             </div>
                         </div>
                     </div>
                     <div class="field villa-indp-only">
                         <div class="group text-field">
                             <label class="title" for="plt">Plot No. / Room No.</label>
+                            <i class="fas fa-asterisk mandatory-mark"></i>
                             <input type="number" class="input-field" id="plt" required>
                         </div>
                     </div>
@@ -390,7 +398,7 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-success" id="post_btn">Post</button>
+                <button type="submit" class="btn btn-success" id="post_btn">Post</button>
             </div>
         </div>
     </section>
@@ -406,11 +414,11 @@
     <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
     <script src="vendor/php-email-form/validate.js"></script>
     <script src="vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
 
 
     <!-- Template Main JS File -->
     <script src="js/alternative.js"></script>
+
 
 </body>
 
