@@ -31,6 +31,9 @@
   <link href="css/style.css" rel="stylesheet">
   <link href="css/index.css" rel="stylesheet">
 
+ 
+
+
 
 </head>
 
@@ -141,9 +144,75 @@
           src="./img/Logo.png" alt="Logo">Home<span class="color-b">Land</span></a>
       <div class="navbar-nav align-items-center ml-auto" style="align-items: flex-end;">
         <a class="nav-item nav-link top_nav_link" href="#">Post Property</a>
-        <a id="signin" class="nav-item nav-link top_nav_link" href="#">Sign in</a>
-        <a class="nav-item nav-link btn  mr-0 top_nav_link" href="signup.html">Sign up</a>
+        <a id="signin" class="nav-item nav-link top_nav_link" onclick="openSigninForm()">Sign in</a>
+        <a class="nav-item nav-link btn  mr-0 top_nav_link" onclick="openSignupForm()"  >Sign up</a>
       </div>
+main
+      <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Pages
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="property-single.html">Property Single</a>
+              <a class="dropdown-item" href="blog-single.html">Blog Single</a>
+              <a class="dropdown-item" href="agents-grid.html">Agents Grid</a>
+              <a class="dropdown-item" href="agent-single.html">Agent Single</a>
+            </div>
+          </li> -->
+          
+<!-- popup signin form  -->
+<div class="signinform-popup" id="signinForm">
+  <form action="/action_page.php" class="signinform-container">
+   
+    <h1 class="signinh1">Sign in</h1>
+    
+    <label for="mobileno"><b>Mobile No.</b></label>
+    <input type="text" placeholder="Enter Mobile No" name="mobileno" required>
+    
+
+    <button type="submit" class="btn">Sign in</button>
+    <button type="butto-rīght" class="btn cancel" onclick="closeSigninForm()" aria-label="Close">
+      <span aria-hidden="true">Close</span>
+    </button>
+    
+  </form>
+</div>
+
+
+<!-- popup signup form -->
+<div class="signupform-popup" id="signupForm">
+  <form action="/action_page.php" class="signupform-container">
+  
+    
+    <h1>Sign up</h1>
+    
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="name" required>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>password</b></label>
+    <input type="password" placeholder="Enter password" name="psw">
+    
+    <label for="mobileno"><b>Mobile No.</b></label>
+    <input type="text" placeholder="Enter Mobile No" name="mobileno" required>
+    
+
+    <button type="submit" class="btn">Sign up</button>
+    <button type="button-rīght" class="btn cancel" onclick="closeSignupForm()" aria-label="Close">
+      <span aria-hidden="true">Close</span>
+    </button>
+    
+  </form>
+</div>
+
+
+
+
+
+main
     </div>
     <div class="container-fluid nav_bottom" id="nav_bottom">
       <a style="margin-right: 0%;" class="navbar-brand" href="img\Logo.png"><img id="logo2" src="img\Logo.png"
@@ -171,7 +240,7 @@
             <a class="nav-link" href="property-grid.html">Rent</a>
           </div>
           <div class="nav-item">
-            <a class="nav-link" href="#">About</a>
+            <a class="nav-link" href="about-us.html">About</a>
           </div>
           <div class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
@@ -184,8 +253,8 @@
               aria-haspopup="true" aria-expanded="false">
               <i class="fas fa-user-circle"></i></button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-              <a href="#" class="dropdown-item">Sign Up</a>
-              <a href="#" class="dropdown-item">Sign in</a>
+              <!-- <a href="#" class="dropdown-item">Sign Up</a>
+              <a href="#" class="dropdown-item">Sign in</a> -->
             </div>
           </div>
         </div>
@@ -211,6 +280,7 @@
           <option value="navi_mumbai">Navi Mumbai</option>
           <option value="nagpur">Nagpur</option>
           <option value="raipur">Raipur</option>
+          <option value="navi_mumbai">Thane</option>
         </select>
       </div>
       <form class="form-inline search-field col-8 row">
@@ -1411,6 +1481,8 @@
 
   <!-- Template Main JS File -->
   <script src="js/main.js"></script>
+  <script src="js/Signin.js"></script>
+  <script src="js/Signup.js"></script>
 
 </body>
 
