@@ -15,6 +15,7 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,12 +23,13 @@
   <link href="vendor/animate.css/animate.min.css" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+  <link href="vendor/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
   <link href="vendor/owl.carousel/owl.carousel.min.css" rel="stylesheet">
 
 
   <!-- Template Main CSS File -->
   <link href="css/style.css" rel="stylesheet">
-  <link href="css\index.css" rel="stylesheet">
+  <link href="css/index.css" rel="stylesheet">
 
  
 
@@ -145,6 +147,7 @@
         <a id="signin" class="nav-item nav-link top_nav_link" onclick="openSigninForm()">Sign in</a>
         <a class="nav-item nav-link btn  mr-0 top_nav_link" onclick="openSignupForm()"  >Sign up</a>
       </div>
+main
       <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
@@ -209,6 +212,7 @@
 
 
 
+main
     </div>
     <div class="container-fluid nav_bottom" id="nav_bottom">
       <a style="margin-right: 0%;" class="navbar-brand" href="img\Logo.png"><img id="logo2" src="img\Logo.png"
@@ -247,7 +251,7 @@
           <div class="dropdowdn">
             <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i></button>
+              <i class="fas fa-user-circle"></i></button>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
               <!-- <a href="#" class="dropdown-item">Sign Up</a>
               <a href="#" class="dropdown-item">Sign in</a> -->
@@ -282,75 +286,261 @@
       <form class="form-inline search-field col-8 row">
         <input class="search-field col-9" type="search" id="search_property" style="background-color: #d6d6d6;"
           placeholder="Locality / area / builder ">
-        <button class="btn btn-outline-dark my-2 my-sm-0 col-3 search_btn" type="submit"><i class="fa fa-search"></i>
+        <button class="btn btn-outline-dark my-2 my-sm-0 col-3 search_btn" type="submit"><i class="fas fa-search"></i>
         </button>
       </form>
     </div>
   </div>
-  <h1>Featured Properties</h1>
 
-  <div class="container">
+  <section class="container-fluid">
+    <h1>Featured Properties</h1>
     <div class="row">
       <div class="col-sm-4">
         <div class="card card-primary">
-          <div class="card-header">Hyderabad</div>
-          <div class="card-body"><img src="img/property-1.jpg" class="img-responsive" style="width:100% ; height: 100%;"
-              alt="Image">
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
           </div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="card card-danger">
-          <div class="card-header">Chennai</div>
-          <div class="card-body"><img src="img/property-2.jpg" class="img-responsive" style="width:100%; height: 100%;"
-              alt="Image">
+        <div class="card card-primary">
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
           </div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
       <div class="col-sm-4">
-        <div class="card card-success">
-          <div class="card-header">Kolkata</div>
-          <div class="card-body"><img src="img/property-3.jpg" class="img-responsive" style="width:100%; height: 100%;"
-              alt="Image">
+        <div class="card card-primary">
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
           </div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div><br>
-
-  <div class="container">
     <div class="row">
       <div class="col-sm-4">
         <div class="card card-primary">
-          <div class="card-header">Mumbai</div>
-          <div class="card-body"><img src="img/property-4.jpg" class="img-responsive" style="width:100%; height: 100%;"
-              alt="Image"></div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
+          </div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="card card-primary">
-          <div class="card-header">Delhi</div>
-          <div class="card-body"><img src="img/property-5.jpg" class="img-responsive" style="width:100%; height: 100%;"
-              alt="Image">
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
           </div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="card card-primary">
-          <div class="card-header">Bangalore</div>
-          <div class="card-body"><img src="img/property-6.jpg" class="img-responsive" style="width:100%; height: 100%"
-              alt="Image">
+          <div class="card-header">
+            <img src="img/property-1.jpg" class="img-responsive title-image" alt="Image">
+            <H6 class="card-title">3BHK Independent House</H6>
           </div>
-          <div class="card-footer"><a href="explore.html">Explore</a></div>
+          <div class="card-body">
+            <div class="property-location">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Airoli / Navi Mumbai
+            </div>
+            <div class="property-price">
+              <i class="fas fa-rupee-sign"></i>
+              22,000,00.00
+            </div>
+            <div class="property-info">
+              <ul class="row">
+                <li class="col-4 bedroom">
+                  <img src="img/bedroom_icon.png" alt="bed">
+                  <p>Bedrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 bathroom">
+                  <img src="img/bathroom_icon.png" alt="bath">
+                  <p>Bathrooms <span class="number">2</span></p>
+                </li>
+                <li class="col-4 parking">
+                  <img src="img/parking_icon.png" alt="parking">
+                  <p>Parking <span class="number">1</span></p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card-footer property-type">
+            <div class="type1">Independent</div>
+            <button class="type2">
+              <p class="mb-0">For <span>Sale</span></p>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-  </div><br><br>
+  </section>
+
+
 
 
 
@@ -1243,27 +1433,27 @@
             <ul class="list-inline">
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                  <i class="fab fa-facebook" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+                  <i class="fab fa-pinterest-p" aria-hidden="true"></i>
                 </a>
               </li>
               <li class="list-inline-item">
                 <a href="#">
-                  <i class="fa fa-dribbble" aria-hidden="true"></i>
+                  <i class="fab fa-dribbble" aria-hidden="true"></i>
                 </a>
               </li>
             </ul>

@@ -1,31 +1,34 @@
 .section {
     border:2px solid black;
     margin: 10px;
-    height : auto;
-    width: auto;
+    height : 350px;
+    width: 749px;
     display:flex;
     box-sizing: border-box;
     padding:18px;
     box-shadow: 4px 4px gray;
+    font-weight: bold;
     font-size: larger;
 }
 
 .section > img{
-    height:250px;
-    width:250px;
+    height:300px;
+    width:300px;
 }
 
 .amount{
-    color:orange;
-    margin-top: 0px;
+    color:rgb(253 165 0);
+    margin-top: -13px;
 }
-.property_card{
+.container{
     /* border:2px solid red; */
-    margin:100px;
+    margin:71px;
     height: 3000px;
-    width: 633px;
+    width: 772px;
     font-family: 'Baloo Bhai 2', cursive;
+    display: inline-block;
 }
+
 
 
 
@@ -37,31 +40,34 @@
 }
 
 .description{
-    display:flex
+    display:flex;
+    margin-top: -11px;
 }
 
 
+
+
 p.district{
-    margin-top: 0px;
+    margin-top: 2px;
 }
 
 .bedroom > img{
     
-    height: 36px;
+    height: 30px;
     width: 38px;
     margin-left:15px;
 }
 
 .bathroom > img{
     
-    height: 36px;
+    height: 30px;
     width: 38px;
     margin-left:39px;
 }
 
 .garage> img{
     
-    height: 36px;
+    height: 30px;
     width: 38px;
     margin-left:40px;
 }
@@ -69,18 +75,212 @@ p.district{
 
 .count{
     margin-top: -3px;
-    margin-left:28px
+    margin-left:-6px
 }
 .icons{
     display: flex;
+    margin-top: -6px;
+    /* margin-left: 15px; */
 }
 
 .bathroom-count{
     margin-top: -2px;
-    padding-left:53px;
+    padding-left:15px;
 }
 
 .garage-count{
     margin-top:0px ;
-    padding-left:57px
+    padding-left:29px
+}
+
+a{
+    background-color:rgb(253 165 0);
+    color:black;
+    height: 30px;
+    width: 116px;
+    margin-left: 65px;
+    margin-top: 14px;
+    text-decoration: none;
+    border-radius: 5px;
+    
+}
+
+
+.filtercontainer{
+    /* border: 2px solid blue; */
+    width: 285px;
+    height: 575px;
+    float: right;
+    margin-top: 115px;
+    margin-right: 184px; ;
+}
+
+.pagecontainer{
+    /* border: 2px solid red; */
+    height: 2291px;
+    width:1404px;   
+}
+.keyword > input[type="text"]{
+    margin: 16px;
+    height: 30px;
+    width: 260px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :larger;
+}
+
+.filterlocation > input[type="text"]{
+    margin: 16px;
+    height: 30px;
+    width: 260px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :larger;
+}
+
+select{
+    margin: 16px;
+    height: 30px;
+    width: 260px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :larger;
+}
+
+
+.area > input{
+    width: 80px;
+    margin-left: 15px;
+    
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :larger;
+    
+    height: 30px;
+}
+
+.search > input{
+    margin: 16px;
+    height: 30px;
+    width: 260px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :larger;
+    color:white;
+    background-color: rgb(253 165 0);
+    padding-bottom: 34px;
+    cursor: pointer;
+
+}
+
+.categories{
+    /* border: 2px solid #bebebe; */
+    width: 290px;
+    height: 415px;
+    float: right;
+    margin-top: 50px;
+    margin-right: -20px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :large;
+    display:flex;
+    flex-direction: column;
+    box-shadow: 4px 4px black;
+
+
+}
+
+.Availabletype{
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size :large;
+    margin-top: 20px;
+}
+
+
+
+.icons > div{
+    margin-left: 29px;
+}
+
+.keyword > img{
+    height: 20px;
+    width: 20px;
+    margin-right: -45px;
+}
+
+.filterlocation > img{
+    height: 29px;
+    width: 23px;
+    margin-right: -44px;
+    margin-bottom: -6px;
+}
+
+.area{
+    margin-top: -10px;
+    margin-left: 15px;
+}
+
+.Availabletype > p{
+    margin-left: 242px;
+    margin-top: -30px;
+}
+
+.section:hover{
+    border:2px solid orange;
+    box-shadow: 2px 2px orange;
+
+}
+.categories:hover{
+    box-shadow: 4px 4px orange;
+}
+
+.card-footer{
+    border: none;
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    padding: 0%;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+.type1{
+    height: 100%;
+    width: 55%;
+    background-color: #ffb900;
+    color: black;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    z-index: 999;
+}
+
+.type1::after{
+    content: "";
+    background: #ffb900;
+    z-index: 1;
+    width: 3rem;
+    height: 101%;
+    transform: skew(-30deg);
+    position: absolute;
+    top: 0rem;
+    right: 9rem; 
+}
+
+.type2{
+    width: 45%;
+    height:47px;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: large;
+    background-color: black;
+    color: #ffffff;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    border: none;
+}
+
+.Propertyname{
+    margin-top: 0%;
+}
+
+.type2 > p{
+    margin-top: 2px;
+    margin-right: -23px;
 }
