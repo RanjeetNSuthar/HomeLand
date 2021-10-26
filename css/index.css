@@ -6,10 +6,10 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
-body {
+/* body {
   font-family: 'Poppins', sans-serif;
   color: #000;
-}
+} */
 
 /* The popup form - hidden by default */
 .signinform-popup {
@@ -83,10 +83,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #000;
-}
+
 
 /* The popup form - hidden by default */
 .signupform-popup {
