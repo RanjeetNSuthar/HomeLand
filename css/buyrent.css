@@ -1,8 +1,24 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.main-container{
+    display: flex;
+    margin-top: 5rem;
+}
+
+.filtercontainer{
+    display: flex;
+    justify-content: flex-end;
+
+}
+
 .section {
+    background-color: #ffffff;
     border:2px solid black;
     margin: 10px;
     height : 350px;
-    width: 749px;
+    width: 100%;
     display:flex;
     box-sizing: border-box;
     padding:18px;
@@ -20,16 +36,6 @@
     color:rgb(253 165 0);
     margin-top: -13px;
 }
-.container{
-    /* border:2px solid red; */
-    margin:71px;
-    height: 3000px;
-    width: 772px;
-    font-family: 'Baloo Bhai 2', cursive;
-    display: inline-block;
-}
-
-
 
 
 .description > img
@@ -43,9 +49,6 @@
     display:flex;
     margin-top: -11px;
 }
-
-
-
 
 p.district{
     margin-top: 2px;
@@ -77,6 +80,7 @@ p.district{
     margin-top: -3px;
     margin-left:-6px
 }
+
 .icons{
     display: flex;
     margin-top: -6px;
@@ -93,74 +97,41 @@ p.district{
     padding-left:29px
 }
 
-a{
-    background-color:rgb(253 165 0);
-    color:black;
-    height: 30px;
-    width: 116px;
-    margin-left: 65px;
-    margin-top: 14px;
-    text-decoration: none;
-    border-radius: 5px;
-    
-}
-
-
-.filtercontainer{
-    /* border: 2px solid blue; */
-    width: 285px;
-    height: 575px;
-    float: right;
-    margin-top: 115px;
-    margin-right: 184px; ;
-}
-
-.pagecontainer{
-    /* border: 2px solid red; */
-    height: 2291px;
-    width:1404px;   
-}
 .keyword > input[type="text"]{
     margin: 16px;
     height: 30px;
-    width: 260px;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size :larger;
+    width: 260px; 
+    font-size: medium;
 }
 
 .filterlocation > input[type="text"]{
     margin: 16px;
     height: 30px;
-    width: 260px;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size :larger;
+    width: 260px; 
+    font-size: medium;
+    font-size: ;
 }
 
 select{
     margin: 16px;
     height: 30px;
-    width: 260px;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size :larger;
+    width: 260px; 
+    font-size: medium;
 }
 
 
 .area > input{
     width: 80px;
     margin-left: 15px;
-    
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size :larger;
-    
+    font-size: medium; 
     height: 30px;
 }
 
 .search > input{
     margin: 16px;
     height: 30px;
-    width: 260px;
-    font-family: 'Baloo Bhai 2', cursive;
-    font-size :larger;
+    width: 260px; 
+    font-size: medium;
     color:white;
     background-color: rgb(253 165 0);
     padding-bottom: 34px;
@@ -172,20 +143,16 @@ select{
     /* border: 2px solid #bebebe; */
     width: 290px;
     height: 415px;
-    float: right;
     margin-top: 50px;
     margin-right: -20px;
-    font-family: 'Baloo Bhai 2', cursive;
     font-size :large;
     display:flex;
     flex-direction: column;
     box-shadow: 4px 4px black;
-
-
 }
 
 .Availabletype{
-    font-family: 'Baloo Bhai 2', cursive;
+    
     font-size :large;
     margin-top: 20px;
 }
@@ -233,7 +200,7 @@ select{
     display: flex;
     margin-left: 1rem;
     margin-top: 0.5rem;
-    padding: 0%;
+    padding: 0% !important;
     font-size: 1.2rem;
     position: relative;
 }
@@ -255,17 +222,16 @@ select{
     background: #ffb900;
     z-index: 1;
     width: 3rem;
-    height: 101%;
+    height: 100%;
     transform: skew(-30deg);
     position: absolute;
     top: 0rem;
-    right: 9rem; 
+    right: 11rem; 
 }
 
 .type2{
     width: 45%;
-    height:47px;
-    font-family: 'Baloo Bhai 2', cursive;
+    height: 100%;
     font-size: large;
     background-color: black;
     color: #ffffff;
@@ -274,13 +240,36 @@ select{
     justify-content: center;
     align-items: baseline;
     border: none;
+    cursor: pointer;
 }
 
 .Propertyname{
     margin-top: 0%;
 }
 
+
 .type2 > p{
     margin-top: 2px;
     margin-right: -23px;
+}
+
+.owner-info{
+    padding: 0.3rem 0.7rem;
+    width: 60%;
+    height: 2rem;
+    background-color: #ffb900;
+    border: 0.1rem solid #000000;
+    border-radius: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.modal-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sbt-btn{
+    margin-left: 40%;
 }

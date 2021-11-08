@@ -2,9 +2,12 @@ section{
     margin-top: 3rem;
     justify-content: center;
     text-align: center;
-main
 }
-body {font-family: Arial, Helvetica, sans-serif;}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 * {box-sizing: border-box;}
 
 /* Button used to open the contact form - fixed at the bottom of the page */
@@ -161,11 +164,6 @@ body {font-family: Arial, Helvetica, sans-serif;}
 #signin:hover{
   cursor: pointer;
 }
-=======
-    padding-left: 10rem !important;
-    padding-right: 10rem !important;
-    font-family: 'Nunito Sans', sans-serif;
-}
 
 section h1{
     margin-bottom: 3rem;
@@ -298,7 +296,3 @@ section h1{
 section > .row{
     margin-bottom: 3rem;
 }
-
-
-
-main
