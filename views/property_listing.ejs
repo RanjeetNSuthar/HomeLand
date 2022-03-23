@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>HomeLand</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="/img/favicon.png" rel="icon">
+    <link href="/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendor/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link href="/vendor/fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="/css/style.css" rel="stylesheet">
+    <link href="/css/listing.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default navbar-trans navbar-expand-lg" id="nav_container">
+        <div class="container-fluid nav_bottom_scrolled">
+            <a style="margin-right: 0%;" class="navbar-brand" href="/img\Logo.png"><img id="logo2" src="/img\Logo.png"
+                    alt="Logo"></a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+                aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+                    data-target="#navbarTogglerDemo01" aria-expanded="false">
+                   <span class="fa fa-search" aria-hidden="true"></span>
+                     </button> -->
+            <div class="navbar-collapse collapse" id="navbarDefault">
+                <div class="navbar-nav">
+                    <div class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="buy.html">Buy</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="property-grid.html">Rent</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </div>
+                    <div class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="navbar-nav align-items-center ml-auto" style="align-items: flex-end;" id="right_nav_cont">
+                    <div class="dropdowdn">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user-circle"></i></i></button>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a href="#" class="dropdown-item">Sign Up</a>
+                            <a href="#" class="dropdown-item">Sign in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="container-fluid">
+        <div class="row">
+            <div id="side_container">
+            </div>
+            <div class="form-container container-fluid">
+                <ul class="tab-head row">
+                    <li class="col-4 active-tab" id="basic_info" onclick="BasicTab()">Basic Info</li>
+                    <li class="col-4" id="address" onclick="AddressTab()">Address</li>
+                    <li class="col-4" id="photos" onclick="PhotoTab()">Photos</li>
+                </ul>
+                <form action="/HomeLand/newListing" method="POST">
+                    <div class="form-content" id="basic_tab">
+                        <div>
+                            <i class="fas fa-asterisk mandatory-mark"></i>
+                            <p>inidcates a mandatorty field</p>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="valid_basic"
+                            style="display: none;">
+                            You missed some of the mandatorty fields.
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="want_to">I want to</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="want_to">
+                                    <input type="radio" id="sale" name="want_to" value="Sale" required>
+                                    <label for="sale">Sale</label>
+                                    <input type="radio" id="rent" name="want_to" value="Rent">
+                                    <label for="rent">Rent</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="property_type">Property Type</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="property_type">
+                                    <input type="radio" id="appartment" name="property_type" value="Appartment"
+                                        required>
+                                    <label for="appartment">Appartment</label>
+                                    <input type="radio" id="ind_house" name="property_type" value="Independent House">
+                                    <label for="ind_house">Independent House</label>
+                                    <input type="radio" id="villa" name="property_type" value="Villa">
+                                    <label for="villa">Villa</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="bhk">BHK</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="bhk">
+                                    <input type="radio" id="0" name="bhk" value="0" required>
+                                    <label for="0">1 RK</label>
+                                    <input type="radio" id="1" name="bhk" value="1">
+                                    <label for="1">1 BHK</label>
+                                    <input type="radio" id="2" name="bhk" value="2">
+                                    <label for="2">2 BHK</label>
+                                    <input type="radio" id="3" name="bhk" value="3">
+                                    <label for="3">3 BHK</label>
+                                    <input type="radio" id="4" name="bhk" value="4">
+                                    <label for="4">4 BHK</label>
+                                    <input type="radio" id="5" name="bhk" value="5">
+                                    <label for="5">5 BHK</label>
+                                    <input type="radio" id="6" name="bhk" value="6">
+                                    <label for="6">6 BHK</label>
+                                    <input type="radio" id="7" name="bhk" value="7">
+                                    <label for="7">7 BHK</label>
+                                    <input type="radio" id="8" name="bhk" value="8">
+                                    <label for="8">8 BHK</label>
+                                    <input type="radio" id="9" name="bhk" value="9">
+                                    <label for="9">9 BHK</label>
+                                    <input type="radio" id="10" name="bhk" value="10">
+                                    <label for="10">10 BHK</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="bathroom">Bathroom</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="bathroom">
+                                    <input type="radio" id="b0" name="bathroom" value="0" required>
+                                    <label for="b0">0</label>
+                                    <input type="radio" id="b1" name="bathroom" value="1">
+                                    <label for="b1">1 </label>
+                                    <input type="radio" id="b2" name="bathroom" value="2">
+                                    <label for="b2">2 </label>
+                                    <input type="radio" id="b3" name="bathroom" value="3">
+                                    <label for="b3">3 </label>
+                                    <input type="radio" id="b4" name="bathroom" value="4">
+                                    <label for="b4">4 </label>
+                                    <input type="radio" id="b5" name="bathroom" value="5">
+                                    <label for="b5">5 </label>
+                                    <input type="radio" id="b6" name="bathroom" value="6">
+                                    <label for="b6">6 </label>
+                                    <input type="radio" id="b7" name="bathroom" value="7">
+                                    <label for="b7">7 </label>
+                                    <input type="radio" id="b8" name="bathroom" value="8">
+                                    <label for="b8">8 </label>
+                                    <input type="radio" id="b9" name="bathroom" value="9">
+                                    <label for="b9">9 </label>
+                                    <input type="radio" id="b10" name="bathroom" value="10">
+                                    <label for="b10">10 </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="balcony">Balcony</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="balcony">
+                                    <input type="radio" id="by0" name="balcony" value="0" required>
+                                    <label for="by0">0</label>
+                                    <input type="radio" id="by1" name="balcony" value="1">
+                                    <label for="by1">1</label>
+                                    <input type="radio" id="by2" name="balcony" value="2">
+                                    <label for="by2">2</label>
+                                    <input type="radio" id="by3" name="balcony" value="3">
+                                    <label for="by3">3</label>
+                                    <input type="radio" id="by4" name="balcony" value="4">
+                                    <label for="by4">4</label>
+                                    <input type="radio" id="by5" name="balcony" value="5">
+                                    <label for="by5">5</label>
+                                    <input type="radio" id="by6" name="balcony" value="6">
+                                    <label for="by6">6</label>
+                                    <input type="radio" id="by7" name="balcony" value="7">
+                                    <label for="by7">7</label>
+                                    <input type="radio" id="by8" name="balcony" value="8">
+                                    <label for="by8">8</label>
+                                    <input type="radio" id="by9" name="balcony" value="9">
+                                    <label for="by9">9</label>
+                                    <input type="radio" id="by10" name="balcony" value="10">
+                                    <label for="by10">10</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="furnish_type">Furnish Type</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="furnish_type">
+                                    <input type="radio" id="fully" name="furnish_type" value="Fully Furnished" required>
+                                    <label for="fully">Fully Furnished</label>
+                                    <input type="radio" id="semi" name="furnish_type" value="Semi Furnished">
+                                    <label for="semi">Semi Furnished</label>
+                                    <input type="radio" id="un" name="furnish_type" value="Unfurnished">
+                                    <label for="un">Unfurnished</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group">
+                                <label class="title" for="parking">Parking Slots</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <div id="parking">
+                                    <input type="radio" id="py0" name="parking" value="0" required>
+                                    <label for="py0">0</label>
+                                    <input type="radio" id="py1" name="parking" value="1">
+                                    <label for="py1">1</label>
+                                    <input type="radio" id="py2" name="parking" value="2">
+                                    <label for="py2">2</label>
+                                    <input type="radio" id="py3" name="parking" value="3">
+                                    <label for="py3">3</label>
+                                    <input type="radio" id="py4" name="parking" value="4">
+                                    <label for="py4">4</label>
+                                    <input type="radio" id="py5" name="parking" value="5">
+                                    <label for="py5">5</label>
+                                    <input type="radio" id="py6" name="parking" value="6">
+                                    <label for="py6">6</label>
+                                    <input type="radio" id="py7" name="parking" value="7">
+                                    <label for="py7">7</label>
+                                    <input type="radio" id="py8" name="parking" value="8">
+                                    <label for="py8">8</label>
+                                    <input type="radio" id="py9" name="parking" value="9">
+                                    <label for="py9">9</label>
+                                    <input type="radio" id="py10" name="parking" value="10">
+                                    <label for="py10">10</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field sale-only">
+                            <div class="group text-field">
+                                <label class="title" for="cost">Cost</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="cost" placeholder=&#x20B9
+                                    onkeyup="format(this)" required>
+                            </div>
+                        </div>
+                        <div class="field rent-only">
+                            <div class="group text-field">
+                                <label class="title" for="m_rent">Monthly Rent</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="m_rent" placeholder=&#x20B9
+                                    onkeyup="format(this)" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group text-field">
+                                <label class="title" for="m_charge">Maintenance Charges (per month)</label>
+                                <input type="text" class="input-field" id="m_charge" placeholder=&#x20B9
+                                    onkeyup="format(this)">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group text-field">
+                                <label class="title" for="area">Carpet Area</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="area" placeholder="S.q f.t"
+                                    onkeyup="format(this)" required>
+                            </div>
+                        </div>
+                        <div class="field rent-only">
+                            <div class="group">
+                                <label class="title" for="ptt">Preffered Tenant Type</label>
+                                <div id="ptt">
+                                    <input type="radio" id="family" name="ptt" value="Family">
+                                    <label for="family">Family</label>
+                                    <input type="radio" id="bachelors" name="ptt" value="Bachelors">
+                                    <label for="bachelors">Bachelors</label>
+                                    <input type="radio" id="company" name="ptt" value="Company">
+                                    <label for="company">Company</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-content" id="address_tab">
+                        <div>
+                            <i class="fas fa-asterisk mandatory-mark"></i>
+                            <p>inidcates a mandatorty field</p>
+                        </div>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert" id="valid_address"
+                            style="display: none;">
+                            You missed some of the mandatorty fields.
+                        </div>
+                        <div class="field">
+                            <div class="group text-field">
+                                <label class="title" for="state">State</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="state" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group text-field">
+                                <label class="title" for="city">City</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="city" required>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="group text-field">
+                                <label class="title" for="locality">Locality / Road</label>
+                                <input type="text" class="input-field" id="locality">
+                            </div>
+                        </div>
+                        <div class="field appartment-only">
+                            <div class="group text-field">
+                                <label class="title" for="bsp">Building/Society/Project</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="text" class="input-field" id="bsp" required>
+                            </div>
+                        </div>
+                        <div class="row appartment-only">
+                            <div class="field col-4">
+                                <div class="group text-field">
+                                    <label class="title" for="flat_n">Flat No.</label>
+                                    <i class="fas fa-asterisk mandatory-mark"></i>
+                                    <input type="number" class="input-field" id="flat_n" required>
+                                </div>
+                            </div>
+                            <div class="field col-4">
+                                <div class="group text-field">
+                                    <label class="title" for="floor_n">Floor No.</label>
+                                    <i class="fas fa-asterisk mandatory-mark"></i>
+                                    <input type="number" class="input-field" id="floor_n" required>
+                                </div>
+                            </div>
+                            <div class="field col-4">
+                                <div class="group text-field">
+                                    <label class="title" for="t_floors">Total Floors</label>
+                                    <input type="number" class="input-field" id="t_floors">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field villa-indp-only">
+                            <div class="group text-field">
+                                <label class="title" for="plt">Plot No. / Room No.</label>
+                                <i class="fas fa-asterisk mandatory-mark"></i>
+                                <input type="number" class="input-field" id="plt" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="photo-container" id="photo_tab">
+                        <div class="add-photo-input-container">
+                            <input type="file" accept="image/*" id="add_photo_input" multiple>
+                            <i class="fas fa-images" id="image_icon"></i>
+                            <h6 id="image_add">+ Add Photos</h6>
+                        </div>
+                        <div class="modal fade" id="max_limit" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Attentation</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        You exceeded the specified limit of 10 Images per listing.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-success" id="post_btn">Post</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="/vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="/vendor/php-email-form/validate.js"></script>
+    <script src="/vendor/owl.carousel/owl.carousel.min.js"></script>
+
+
+    <!-- Template Main JS File -->
+    <script src="/js/alternative.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+img{
+  content: "";
+  background-image:url('images\bgurl.PNG');
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+
+input{
+  margin-top: 41px;
+    margin-left: -31px;
+    height: 20px;
+    width: 250px;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+form{
+  z-index: 1;
+  border: 2px solid white;
+  background-color: #8f8e00;
+  margin-left: 424px;
+  margin-top: 216px;
+  width:540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 2px 2px white;
+}
+
+input[type="submit"]{
+  padding-top: 0px;
+  height: 25px;
+}
+
+body{
+  /* background-color: black; */
+  /* background-image: url(images\bgurl.PNG);
+  background-size: cover;
+  background-attachment: fixed; */
+  /* background:"images\bgurl.PNG"; */
+  font-family: 'Baloo Bhai 2', cursive;
+  height:660px;
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* form::before{
+  content:"";
+  position:absolute;
+  background:url('project\HomeLand\img\about-1.jpg');
+  height:100%;
+  width:100%;
+  z-index: -1;
+  opacity:0.5;
+} */
+
+img{
+  margin:-14px;
+  height:42px;
+  width:131px;
+z-index: -10;
+}
